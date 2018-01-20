@@ -6,13 +6,13 @@ float y;
 
 Objective() {
     x = random(255,400);
-    speed = random(1);
+    speed = random(10);
     y=0;
 
   }
   void display(){
     noStroke();
-    rect(x,y,50,120);
+    image(rain,x,y);
     }
   
   void move(){

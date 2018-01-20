@@ -1,5 +1,12 @@
-PImage car, background;
-Objective[] objectives = new Objective[10]; 
+
+
+//otkazah se ot praveneto na collision zashtoto prosto ne moga da razbera function-a
+
+//controls : W A S D
+//burza i simple igra, bez nikakva cel zashotot ne mojah da izmislq cel :D
+
+PImage car, background,rain;
+Objective[] objectives = new Objective[50]; 
 int start = 0;
 int score = 0;
 float player_x = 250;
@@ -9,14 +16,22 @@ void setup(){
    background(0,175,23);
    car = loadImage("car.png");
    background = loadImage("bg.png");
+   rain = loadImage("tear.png");
+   background(175);
    for(int i =0; i <objectives.length; i+=2){
      objectives[i] = new Objective();
    }
    
 }
 void draw(){
+   /*  start = 1;
+   textSize(35);
+   text("Press any key to start", width/2, height/2);
+   if(keyPressed){
+     start= 0;
+   }*/ //this is not working.. 
   if(start == 0){
-  println(mouseX, mouseY);
+  //println(mouseX, mouseY);
   image(background,0,0);
   textSize(20);
   text("Score:", width/4,40);
